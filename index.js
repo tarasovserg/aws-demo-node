@@ -18,6 +18,12 @@ app.get('/', (req, res) => {
 
 });
 
+// To handle health checks
+app.get('/healthcheck', (req, res) => {
+
+    res.send('OK');
+});
+
 app.listen(8080, () => {
     console.log('Listening on port 8080');
 });
